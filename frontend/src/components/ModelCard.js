@@ -30,7 +30,7 @@ const ModelCard = ({ user, dataid ,openModel }) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:3000/users/${userData._id}`,
+        `http://localhost:8000/users/${userData._id}`,
         {
           method: "PUT",
           headers: {

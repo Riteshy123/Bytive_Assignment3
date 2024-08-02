@@ -35,8 +35,9 @@ app.get('/users', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+
 // delete API
-// i'm commenting this piece of code because now I'm not deleting data for db just remove it from HTML 
+
 // app.delete('/user/:id', async (req, res) => {
 //   const userId = req.params.id;
 
@@ -57,7 +58,7 @@ app.get('/users', async (req, res) => {
 
 
 app.put('/users/:id', async (req, res) => {
-  const userId = req.params.id; // Corrected parameter name
+  const userId = req.params.id; 
   
   const updatedUserData = req.body; 
   console.log('udoaded user form backend',updatedUserData);
