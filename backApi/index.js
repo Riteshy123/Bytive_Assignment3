@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://127.0.0.1/bytiveUser", {
+  .connect("mongodb://localhost:27017/User_BytiveTechnology", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -17,7 +17,7 @@ mongoose
     console.log("mongodb connected");
   });
 
-  var dataUser=''
+var dataUser=''
 app.post("/createUser", (req, res) => {
   UserModel.create(req.body)
     .then((users) => res.json(users))
@@ -76,6 +76,6 @@ app.put('/users/:id', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Serve Is running on port 3000");
+app.listen(8000, () => {
+  console.log("Server is running on port 8000");
 });
